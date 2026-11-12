@@ -1,0 +1,100 @@
+/* ==========================================================================
+   DataForge · estilos.css — personalización de Bootstrap con CSS propio
+   Índice: 1 Variables · 2 Tipografía · 3 Modelo de cajas · 4 Navbar · 5 Botones
+           6 Tarjetas · 7 Flexbox · 8 Formularios · 9 Pie de página · 10 Efectos
+   ========================================================================== */
+
+/* 1. Variables CSS (propiedades personalizadas) y colores de marca */
+:root{
+  --df-navy:#0c2060; --df-teal:#007c91; --df-orange:#ff9d18; --df-ink:#17204d; --df-bg:#f4f7f9; --df-line:#e1e6ea;
+  --df-radio:1rem; --df-sombra:0 8px 24px rgba(12,32,96,.08);
+  --bs-primary:#0c2060; --bs-primary-rgb:12,32,96;
+  --bs-warning:#ff9d18; --bs-warning-rgb:255,157,24;
+  --bs-info:#007c91;    --bs-info-rgb:0,124,145;
+  --bs-body-color:#17204d; --bs-body-font-family:Arial,Helvetica,sans-serif;
+  --bs-link-color:#007c91; --bs-link-hover-color:#005a69; --bs-border-radius:.75rem;
+}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+::selection{background:var(--df-orange);color:var(--df-navy)}            /* pseudoelemento ::selection */
+
+/* 2. Tipografía y fondos */
+h1,h2,h3,h4,.display-5{font-family:Georgia,"Times New Roman",serif;color:var(--df-navy);line-height:1.15;text-wrap:balance}
+.eyebrow{font:700 .8rem/1 Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--df-teal)}
+.lead{color:#56657b}
+main>section:nth-of-type(even){background-color:var(--df-bg)}            /* selector hijo + pseudoclase estructural */
+.fondo-degradado{background:linear-gradient(135deg,#fff 0%,#e9f1f7 100%)}
+.fondo-marca{background:linear-gradient(135deg,var(--df-navy),#17306f);color:#fff}
+
+/* 3. Modelo de cajas: margen, relleno, borde y box-sizing */
+*,*::before,*::after{box-sizing:border-box}
+.caja-df{margin:0 0 1.5rem;padding:1.75rem;border:1px solid var(--df-line);border-radius:var(--df-radio);background:#fff;box-shadow:var(--df-sombra)}
+.saltar{position:absolute;left:12px;top:-70px;z-index:2000;padding:.6rem 1rem;border-radius:.5rem;background:var(--df-navy);color:#fff}
+.saltar:focus{top:12px}
+:focus-visible{outline:3px solid var(--df-orange);outline-offset:3px}
+
+/* 4. Barra de navegación (navbar) personalizada */
+.navbar-brand{display:flex;align-items:center}
+.navbar .nav-link{position:relative;font-weight:700;color:var(--df-ink);transition:color .2s}
+.navbar .nav-link::after{content:"";position:absolute;left:50%;bottom:.15rem;width:0;height:3px;border-radius:2px;background:var(--df-orange);transition:width .25s,left .25s}
+.navbar .nav-link:hover::after,.navbar .nav-link.active::after,.navbar .nav-link[aria-current="page"]::after{width:60%;left:20%}
+.navbar .nav-link:hover,.navbar .nav-link.active{color:var(--df-teal)}
+.dropdown-item:active{background:var(--df-navy)}
+
+/* 5. Botones (componente de Bootstrap personalizado) */
+.btn{font-weight:700;border-radius:999px;padding:.7rem 1.5rem;transition:transform .2s,box-shadow .2s,background-color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(12,32,96,.18)}
+.btn:active{transform:translateY(0)}
+.btn-primary{--bs-btn-bg:#0c2060;--bs-btn-border-color:#0c2060;--bs-btn-hover-bg:#17306f;--bs-btn-hover-border-color:#17306f;--bs-btn-active-bg:#081744}
+.btn-warning{--bs-btn-color:#0c2060;--bs-btn-bg:#ff9d18;--bs-btn-border-color:#ff9d18;--bs-btn-hover-color:#0c2060;--bs-btn-hover-bg:#e68a0c;--bs-btn-hover-border-color:#e68a0c;--bs-btn-active-bg:#cc7a0a;--bs-btn-active-color:#0c2060}
+.btn-outline-primary{--bs-btn-color:#0c2060;--bs-btn-border-color:#0c2060;--bs-btn-hover-bg:#0c2060;--bs-btn-hover-border-color:#0c2060;--bs-btn-active-bg:#081744}
+.btn:disabled,.btn.disabled{opacity:.6;transform:none}
+
+/* 6. Tarjetas */
+.card-df{height:100%;border:1px solid var(--df-line);border-top:4px solid var(--df-orange);border-radius:var(--df-radio);box-shadow:var(--df-sombra);transition:transform .25s,box-shadow .25s}
+.card-df:hover,.card-df:focus-within{transform:translateY(-6px);box-shadow:0 16px 36px rgba(12,32,96,.14)}
+.card-df .card-title{font-size:1.25rem}
+.card-df + .card-df{margin-top:0}
+ul.lista-marca{padding-left:0;list-style:none}
+ul.lista-marca li{position:relative;padding-left:1.5rem;margin-bottom:.4rem}
+ul.lista-marca li::before{content:"";position:absolute;left:0;top:.55em;width:.6rem;height:.6rem;border-radius:50%;background:var(--df-orange)}
+a[target="_blank"]::after{content:" ↗";font-size:.8em}                  /* selector de atributo */
+a[href^="mailto:"]{font-weight:700}
+
+/* 7. Flexbox */
+.acciones{display:flex;flex-wrap:wrap;gap:.75rem}
+.stats-lista{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:1rem 2.5rem;margin:0;padding:1.5rem 0 0;border-top:1px solid var(--df-line);list-style:none}
+.stats-lista li{display:flex;flex-direction:column;min-width:130px}
+.stats-lista strong{font:700 2rem/1 Georgia,serif;color:var(--df-navy)}
+.stats-lista span{font-size:.9rem;color:#56657b}
+.pie-inferior{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1.5rem;font-size:.88rem}
+
+/* 8. Formularios */
+.form-label{font-weight:700;font-size:.92rem}
+.form-control,.form-select{border:1px solid #8b96a8;padding:.65rem .85rem}
+.form-control:focus,.form-select:focus{border-color:var(--df-navy);box-shadow:0 0 0 .2rem rgba(255,157,24,.35)}
+.form-control::placeholder{color:#5a677d}
+.form-control:disabled{background:#eef2f6}
+fieldset{margin-bottom:1.5rem;padding:1.25rem 1.5rem 0.5rem;border:1px solid var(--df-line);border-radius:var(--df-radio);background:#fff}
+fieldset legend{float:none;width:auto;margin-bottom:.5rem;padding:0 .5rem;font:700 1.05rem Georgia,serif;color:var(--df-navy)}
+.form-check-input:checked{background-color:var(--df-navy);border-color:var(--df-navy)}
+
+/* 9. Pie de página */
+.site-footer{background:var(--df-navy);color:#dbe3f3}
+.site-footer h2{font:700 .85rem Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--df-orange)}
+.site-footer a{color:#dbe3f3;text-decoration:none}
+.site-footer a:hover{color:#fff;text-decoration:underline}
+.site-footer .logo-pie{display:inline-block;padding:.5rem .9rem;border-radius:.75rem;background:#fff;line-height:0}
+.site-footer .redes a{display:inline-grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:rgba(255,255,255,.12);transition:background .2s,transform .2s}
+.site-footer .redes a:hover{background:var(--df-orange);color:var(--df-navy);transform:translateY(-3px)}
+.site-footer .redes a::after{content:none}
+
+/* 10. Efectos visuales y animaciones */
+@keyframes aparecer{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.aparece{animation:aparecer .8s ease both}
+.aparece:nth-child(2){animation-delay:.12s}.aparece:nth-child(3){animation-delay:.24s}
+img.zoom{transition:transform .4s}img.zoom:hover{transform:scale(1.03)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Puntos de quiebre propios (se suman a los de Bootstrap: 576, 768, 992, 1200, 1400 px) */
+@media (max-width:991.98px){.navbar-collapse{padding:1rem 0}.navbar .nav-link::after{display:none}}
+@media (max-width:575.98px){.stats-lista{gap:1rem 1.5rem}.acciones .btn,.banda-cta .btn,form>.btn{width:100%}.acciones .btn{flex:1 1 100%}}

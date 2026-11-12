@@ -1,0 +1,5 @@
+/* Blog */
+.post img{width:100%;height:auto}
+.post .fecha{font-size:.85rem;color:#56657b}
+aside .list-group-item{border-left:3px solid transparent;transition:border-color .2s,background-color .2s}
+aside .list-group-item:hover{border-left-color:var(--df-orange);background:#fff6e6}

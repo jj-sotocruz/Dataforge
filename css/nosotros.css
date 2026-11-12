@@ -1,0 +1,8 @@
+/* Nosotros */
+.persona img{border-radius:50%;margin-bottom:1rem;border:4px solid #fff;box-shadow:var(--df-sombra)}
+.pasos{counter-reset:paso;list-style:none;padding:0}
+.pasos li{position:relative;height:100%;padding:1.5rem;border:1px solid var(--df-line);border-radius:var(--df-radio);background:#fff;box-shadow:var(--df-sombra)}
+.pasos li::before{counter-increment:paso;content:counter(paso);display:grid;place-items:center;width:2.5rem;height:2.5rem;margin-bottom:.9rem;border-radius:50%;background:var(--df-orange);color:var(--df-navy);font:700 1.1rem Georgia,serif}
+.pasos li:nth-child(even)::before{background:var(--df-teal);color:#fff}
+.franja-stats{border-radius:var(--df-radio);background:var(--df-navy);color:#fff}
+.franja-stats strong{display:block;font:700 2rem/1.1 Georgia,serif;color:var(--df-orange)}

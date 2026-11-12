@@ -1,0 +1,8 @@
+/* Servicios */
+.card-icono{display:block;margin-bottom:1rem;transition:transform .3s}
+.card-df:hover .card-icono{transform:rotate(-6deg) scale(1.1)}
+.tabla-tarifas thead th{background:var(--df-navy);color:#fff;font-size:.85rem;letter-spacing:.04em;border:0}
+.tabla-tarifas tbody th[scope="rowgroup"]{background:var(--df-bg);color:var(--df-navy);border-right:1px solid var(--df-line)}
+.tabla-tarifas caption{caption-side:top;padding:1rem 1.25rem;font:700 1.05rem Georgia,serif;color:var(--df-navy)}
+.tabla-tarifas tbody tr:hover td,.tabla-tarifas tbody tr:hover th[scope="row"]{background:#fff6e6}
+.tabla-tarifas tfoot td{background:var(--df-bg);color:#56657b;font-size:.85rem}

@@ -1,0 +1,5 @@
+/* Mapa del sitio */
+.sitemap,.sitemap ul{list-style:none}
+.sitemap{display:grid;gap:.9rem;padding:0;font-size:1.05rem}
+.sitemap ul{display:grid;gap:.4rem;margin-top:.5rem;padding-left:1.4rem;border-left:3px solid var(--df-orange);font-size:.95rem;color:#56657b}
+.sitemap a{font-weight:700}.sitemap ul a{font-weight:400}

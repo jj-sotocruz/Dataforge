@@ -1,0 +1,3 @@
+/* Clientes */
+.logos{padding:2rem;border:1px solid var(--df-line);border-radius:var(--df-radio);background:#fff;box-shadow:var(--df-sombra);text-align:center}
+.logos img{max-width:100%;height:auto}

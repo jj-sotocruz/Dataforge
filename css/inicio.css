@@ -1,0 +1,8 @@
+/* Inicio */
+.hero{padding-block:5rem 4rem}
+.hero h1 em{color:var(--df-teal);font-style:normal}
+.hero .contenido{animation:aparecer .8s ease both}
+.hero-visual img{max-width:100%;height:auto;filter:drop-shadow(0 18px 24px rgba(12,32,96,.15))}
+.demo video{background:var(--df-navy);box-shadow:var(--df-sombra)}
+.banda-cta{background:linear-gradient(135deg,var(--df-navy),#17306f);color:#fff}
+.banda-cta h2{color:#fff}

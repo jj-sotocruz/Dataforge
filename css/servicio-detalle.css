@@ -1,0 +1,4 @@
+/* Detalle de servicio (página en construcción) */
+.construccion{min-height:62vh;display:flex;align-items:center}
+.construccion h2{font-size:1.4rem;color:var(--df-teal)}
+.construccion .visual img{max-width:100%;height:auto}

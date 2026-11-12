@@ -1,0 +1,9 @@
+/* Contacto */
+.dato-contacto{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1rem}
+.dato-contacto .bi{display:grid;place-items:center;flex:0 0 2.6rem;height:2.6rem;border-radius:50%;background:var(--df-bg);color:var(--df-teal);font-size:1.2rem}
+.dato-contacto strong{display:block}
+.horario-chip:checked + label{background:var(--df-navy);color:#fff;border-color:var(--df-navy)}
+.mapa-marco{overflow:hidden;border-radius:var(--df-radio);box-shadow:var(--df-sombra)}
+.accordion{--bs-accordion-active-bg:#fff6e6;--bs-accordion-active-color:#0c2060;--bs-accordion-btn-focus-box-shadow:0 0 0 .2rem rgba(255,157,24,.35)}
+.estado-paso{display:flex;align-items:center;gap:.5rem}
+#form-contacto fieldset{box-shadow:var(--df-sombra)}      /* selector de ID + descendiente */

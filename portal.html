@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal del cliente | DataForge</title>
+    <meta name="description" content="Accede al portal de clientes de DataForge para consultar tus proyectos, dashboards, documentos y soporte.">
+    <meta name="theme-color" content="#0c2060">
+    <link rel="icon" type="image/svg+xml" href="imagenes/Header/icono.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/Header/icono-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagenes/Header/icono-180.png">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/portal.css">
+    <script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/vendor/chart.umd.js" defer></script>
+    <script src="js/portal.js" defer></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100 pagina-portal">
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <header class="sticky-top bg-white shadow-sm">
+      <nav class="navbar navbar-expand-lg" aria-label="Principal">
+        <div class="container">
+          <a class="navbar-brand" href="index.html#inicio"><img src="imagenes/Header/logo.svg" alt="DataForge, ir al inicio" width="180" height="47"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="menu-principal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                <ul class="dropdown-menu"><li><a class="dropdown-item" href="servicios/dashboards-bi.html">Dashboards &amp; BI</a></li><li><a class="dropdown-item" href="servicios/analitica-descriptiva.html">Analítica descriptiva</a></li><li><a class="dropdown-item" href="servicios/machine-learning.html">Machine Learning aplicado</a></li><li><a class="dropdown-item" href="servicios/mlops.html">MLOps &amp; automatización</a></li><li><a class="dropdown-item" href="servicios/data-strategy.html">Data Strategy &amp; Governance</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item fw-bold" href="servicios/servicios.html#servicios">Ver todos los servicios</a></li></ul></li>
+              <li class="nav-item"><a class="nav-link" href="casos_exito/casos_exito.html#casos-exito">Casos de éxito</a></li><li class="nav-item"><a class="nav-link" href="nosotros/nosotros.html#nosotros">Nosotros</a></li><li class="nav-item"><a class="nav-link" href="clientes/clientes.html#clientes">Clientes</a></li><li class="nav-item"><a class="nav-link" href="blog/blog.html#blog">Blog</a></li>
+              <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-outline-primary btn-sm px-3 active" href="portal.html">Portal cliente</a></li>
+              <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-warning btn-sm px-3" href="contacto.html#contacto">Contáctanos</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="contenido" class="flex-grow-1">
+      <section id="vista-login" class="bg-white" aria-labelledby="portal-title">
+        <div class="row g-0 min-vh-75">
+          <div class="col-lg-6 login-lado d-none d-lg-flex flex-column justify-content-center p-5">
+            <p class="eyebrow text-warning">DataForge · Portal del cliente</p>
+            <h2 class="display-6 fw-bold mb-3">Todo tu proyecto de datos en un solo lugar</h2>
+            <ul class="list-unstyled d-grid gap-2 mb-4"><li><i class="bi bi-check2-circle text-warning me-2"></i>Dashboards y KPIs actualizados</li><li><i class="bi bi-check2-circle text-warning me-2"></i>Avance de cada proyecto y entregables</li><li><i class="bi bi-check2-circle text-warning me-2"></i>Documentos, soporte y tickets</li></ul>
+            <picture><source type="image/webp" srcset="imagenes/Home/fondo-640.webp"><img src="imagenes/Home/fondo.png" alt="Ilustración de un panel de datos conectado a una red de nodos" width="400" height="348" loading="lazy" decoding="async"></picture>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center justify-content-center p-4 p-md-5">
+            <div id="login-tarjeta" class="login-tarjeta">
+              <p class="eyebrow mb-2">Portal del cliente</p>
+              <h1 id="portal-title" class="h2 fw-bold mb-2">Bienvenido al Portal del Cliente</h1>
+              <p class="text-secondary mb-4">Accede para consultar tus proyectos, dashboards y resultados.</p>
+              <form id="form-login" novalidate>
+                <div class="mb-3"><label class="form-label" for="portal-email">Correo electrónico</label><input class="form-control" id="portal-email" name="email" type="email" autocomplete="email" required placeholder="nombre@empresa.pe"><div class="invalid-feedback">Escribe tu correo electrónico.</div></div>
+                <div class="mb-3"><label class="form-label" for="portal-pass">Contraseña</label><div class="input-group has-validation"><input class="form-control" id="portal-pass" name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="Mínimo 8 caracteres"><button class="btn btn-outline-primary px-3" type="button" id="ver-clave" aria-label="Mostrar contraseña"><i class="bi bi-eye"></i></button><div class="invalid-feedback">Escribe tu contraseña (mínimo 8 caracteres).</div></div></div>
+                <div class="d-flex justify-content-between align-items-center mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="recordar" name="recordar"><label class="form-check-label" for="recordar">Recordarme</label></div><button type="button" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal-olvide">Olvidé mi contraseña</button></div>
+                <button id="btn-login" class="btn btn-primary btn-lg w-100" type="submit">Iniciar sesión</button>
+                <div id="login-alerta" class="d-none" role="alert"></div>
+              </form>
+              <div class="caja-df mt-4 mb-0 p-3"><h2 class="h6">Cuentas de demostración</h2><div class="d-grid gap-2"><div class="cuenta-demo"><span><strong>VerdeLuz</strong><br><small class="text-secondary">cliente@verdeluz.pe</small></span><button type="button" class="btn btn-outline-primary btn-sm px-3" data-cuenta="verdeluz">Usar</button></div><div class="cuenta-demo"><span><strong>Finova</strong><br><small class="text-secondary">cliente@finova.pe</small></span><button type="button" class="btn btn-outline-primary btn-sm px-3" data-cuenta="finova">Usar</button></div><div class="cuenta-demo"><span><strong>Bienestar+</strong><br><small class="text-secondary">cliente@bienestar.pe</small></span><button type="button" class="btn btn-outline-primary btn-sm px-3" data-cuenta="bienestar">Usar</button></div></div><p class="small text-secondary mt-2 mb-0">Contraseña de todas las cuentas: <strong>DataForge2026</strong>. Los datos mostrados son ficticios.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="vista-panel" class="d-none bg-white py-4" aria-label="Panel del cliente">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div class="d-flex align-items-center gap-3"><span id="avatar" class="avatar" aria-hidden="true"></span><div><h2 class="h4 mb-0">Hola, <span data-contacto></span></h2><small class="text-secondary"><span data-empresa></span> · Panel de seguimiento</small></div></div>
+            <div class="d-flex gap-2"><button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#notificaciones"><i class="bi bi-bell me-1"></i>Notificaciones</button><button class="btn btn-primary" type="button" data-salir><i class="bi bi-box-arrow-right me-1"></i>Cerrar sesión</button></div>
+          </div>
+          <ul class="nav nav-underline nav-panel mb-4" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-resumen" data-bs-toggle="tab" data-bs-target="#p-resumen" type="button" role="tab" aria-controls="p-resumen" aria-selected="true"><i class="bi bi-speedometer2 me-1"></i>Resumen</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="t-proyectos" data-bs-toggle="tab" data-bs-target="#p-proyectos" type="button" role="tab" aria-controls="p-proyectos" aria-selected="false"><i class="bi bi-kanban me-1"></i>Proyectos</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="t-dashboards" data-bs-toggle="tab" data-bs-target="#p-dashboards" type="button" role="tab" aria-controls="p-dashboards" aria-selected="false"><i class="bi bi-bar-chart-line me-1"></i>Dashboards</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="t-docs" data-bs-toggle="tab" data-bs-target="#p-docs" type="button" role="tab" aria-controls="p-docs" aria-selected="false"><i class="bi bi-folder2-open me-1"></i>Documentos</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="t-soporte" data-bs-toggle="tab" data-bs-target="#p-soporte" type="button" role="tab" aria-controls="p-soporte" aria-selected="false"><i class="bi bi-life-preserver me-1"></i>Soporte</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="t-cuenta" data-bs-toggle="tab" data-bs-target="#p-cuenta" type="button" role="tab" aria-controls="p-cuenta" aria-selected="false"><i class="bi bi-person-gear me-1"></i>Mi cuenta</button></li></ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="p-resumen" role="tabpanel" aria-labelledby="t-resumen" tabindex="0">
+              <div id="kpis" class="row g-3 mb-3"></div>
+              <div class="row g-3"><div class="col-lg-8"><div class="card kpi h-100"><div class="card-body"><h3 class="h6">Ventas de los últimos 12 meses</h3><div class="grafico"><canvas id="g-ventas" role="img" aria-label="Gráfico de ventas mensuales frente a la meta"></canvas></div></div></div></div>
+              <div class="col-lg-4"><div class="card kpi h-100"><div class="card-body"><h3 class="h6">Estado de tus proyectos</h3><div class="grafico"><canvas id="g-estado" role="img" aria-label="Gráfico de estado de proyectos"></canvas></div></div></div></div>
+              <div class="col-12"><div class="card kpi"><div class="card-body"><h3 class="h6">Actividad reciente</h3><ul id="actividad" class="actividad list-unstyled mb-0"></ul></div></div></div></div>
+            </div>
+            <div class="tab-pane fade" id="p-proyectos" role="tabpanel" aria-labelledby="t-proyectos" tabindex="0"><div class="card kpi"><div class="table-responsive"><table class="table tabla-panel align-middle mb-0"><caption class="visually-hidden">Proyectos de DataForge para tu empresa</caption><thead><tr><th scope="col">Código</th><th scope="col">Proyecto</th><th scope="col">Estado</th><th scope="col">Avance</th><th scope="col">Responsable</th><th scope="col">Entrega</th><th scope="col"><span class="visually-hidden">Acciones</span></th></tr></thead><tbody id="proyectos-tabla"></tbody></table></div></div></div>
+            <div class="tab-pane fade" id="p-dashboards" role="tabpanel" aria-labelledby="t-dashboards" tabindex="0">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3"><div class="d-flex align-items-center gap-2"><label class="form-label mb-0" for="periodo">Periodo</label><select id="periodo" class="form-select w-auto"><option value="30">Últimos 3 meses</option><option value="90">Últimos 6 meses</option><option value="365" selected>Últimos 12 meses</option></select></div><button id="exportar" type="button" class="btn btn-outline-primary"><i class="bi bi-filetype-csv me-1"></i>Exportar CSV</button></div>
+              <div class="row g-3"><div class="col-lg-5"><div class="card kpi h-100"><div class="card-body"><h3 class="h6">Ventas por región vs meta</h3><div class="grafico"><canvas id="g-region" role="img" aria-label="Gráfico de ventas por región frente a la meta"></canvas></div></div></div></div>
+              <div class="col-lg-7"><div class="card kpi h-100"><div class="card-body"><h3 class="h6">Proyección de ventas con machine learning</h3><div class="grafico"><canvas id="g-proyeccion" role="img" aria-label="Gráfico de ventas reales y proyección"></canvas></div></div></div></div></div>
+            </div>
+            <div class="tab-pane fade" id="p-docs" role="tabpanel" aria-labelledby="t-docs" tabindex="0"><div class="card kpi"><div class="card-body"><h3 class="h6">Documentos de tu cuenta</h3><ul id="docs-lista" class="list-group list-group-flush"></ul></div></div></div>
+            <div class="tab-pane fade" id="p-soporte" role="tabpanel" aria-labelledby="t-soporte" tabindex="0"><div class="row g-3">
+              <div class="col-lg-5"><div class="card kpi h-100"><div class="card-body"><h3 class="h6">Crear un ticket de soporte</h3><p class="small text-secondary">Tu gestor de cuenta: <strong id="tickets-gestor"></strong></p>
+                <form id="form-ticket" novalidate><div class="mb-3"><label class="form-label" for="tk-asunto">Asunto</label><input class="form-control" id="tk-asunto" name="asunto" required minlength="5" maxlength="80"><div class="invalid-feedback">Escribe un asunto (mínimo 5 caracteres).</div></div>
+                <div class="mb-3"><label class="form-label" for="tk-prioridad">Prioridad</label><select class="form-select" id="tk-prioridad" name="prioridad"><option>Baja</option><option selected>Media</option><option>Alta</option></select></div>
+                <div class="mb-3"><label class="form-label" for="tk-desc">Descripción</label><textarea class="form-control" id="tk-desc" name="descripcion" rows="3" required minlength="10"></textarea><div class="invalid-feedback">Describe el problema (mínimo 10 caracteres).</div></div>
+                <button class="btn btn-warning" type="submit">Enviar ticket</button></form></div></div></div>
+              <div class="col-lg-7"><div class="card kpi h-100"><div class="card-body"><h3 class="h6">Mis tickets</h3><div class="table-responsive"><table class="table tabla-panel align-middle mb-0"><caption class="visually-hidden">Tickets de soporte</caption><thead><tr><th scope="col">Ticket</th><th scope="col">Asunto</th><th scope="col">Prioridad</th><th scope="col">Estado</th><th scope="col">Fecha</th></tr></thead><tbody id="tickets-tabla"></tbody></table></div></div></div></div></div></div>
+            <div class="tab-pane fade" id="p-cuenta" role="tabpanel" aria-labelledby="t-cuenta" tabindex="0"><div class="row g-3">
+              <div class="col-lg-6"><div class="card kpi h-100"><div class="card-body"><h3 class="h6">Datos de la empresa</h3><form id="form-perfil" novalidate class="row g-3">
+                <div class="col-md-6"><label class="form-label" for="perfil-empresa">Empresa</label><input class="form-control" id="perfil-empresa" disabled></div><div class="col-md-6"><label class="form-label" for="perfil-rubro">Rubro</label><input class="form-control" id="perfil-rubro" disabled></div>
+                <div class="col-12"><label class="form-label" for="perfil-contacto">Contacto principal</label><input class="form-control" id="perfil-contacto" disabled></div><div class="col-md-6"><label class="form-label" for="perfil-correo">Correo</label><input class="form-control" id="perfil-correo" disabled></div><div class="col-md-6"><label class="form-label" for="perfil-plan">Plan</label><input class="form-control" id="perfil-plan" disabled></div>
+                <div class="col-md-6"><label class="form-label" for="perfil-tel">Teléfono</label><input class="form-control" id="perfil-tel" inputmode="tel"><div class="invalid-feedback">Ingresa un teléfono válido.</div></div><div class="col-12"><button class="btn btn-primary" type="submit">Guardar teléfono</button></div></form></div></div></div>
+              <div class="col-lg-6"><div class="card kpi mb-3"><div class="card-body"><h3 class="h6">Notificaciones</h3><div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" id="notif-informes"><label class="form-check-label" for="notif-informes">Informes mensuales por correo</label></div><div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" id="notif-alertas"><label class="form-check-label" for="notif-alertas">Alertas de métricas</label></div><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="notif-boletin"><label class="form-check-label" for="notif-boletin">Boletín del blog</label></div></div></div>
+              <div class="card kpi"><div class="card-body"><h3 class="h6">Cambiar contraseña</h3><form id="form-clave" novalidate><div class="mb-2"><label class="form-label" for="c-actual">Contraseña actual</label><input class="form-control" id="c-actual" name="actual" type="password" autocomplete="current-password" required></div><div class="mb-2"><label class="form-label" for="c-nueva">Nueva contraseña</label><input class="form-control" id="c-nueva" name="nueva" type="password" autocomplete="new-password" required></div><div class="mb-3"><label class="form-label" for="c-rep">Repetir nueva contraseña</label><input class="form-control" id="c-rep" name="repetir" type="password" autocomplete="new-password" required></div><button class="btn btn-primary" type="submit">Actualizar contraseña</button><div id="clave-alerta" role="alert"></div></form></div></div></div></div></div>
+          </div>
+        </div>
+      </section>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="notificaciones" aria-labelledby="notif-titulo"><div class="offcanvas-header"><h2 class="offcanvas-title h5" id="notif-titulo">Notificaciones</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button></div><div class="offcanvas-body"><ul id="actividad-off" class="actividad list-unstyled mb-0"></ul></div></div>
+      <div class="modal fade" id="modal-olvide" tabindex="-1" aria-labelledby="olvide-titulo" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><form id="form-olvide" novalidate><div class="modal-header"><h2 class="modal-title h5" id="olvide-titulo">Restablecer contraseña</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body"><p>Escribe el correo con el que accedes al portal y te enviaremos un enlace para crear una nueva contraseña.</p><label class="form-label" for="olvide-correo">Correo electrónico</label><input class="form-control" id="olvide-correo" name="correo" type="email" required placeholder="nombre@empresa.pe"><div class="invalid-feedback">Escribe un correo válido.</div><div id="olvide-ok" class="alert alert-success mt-3 d-none" role="status"></div></div><div class="modal-footer"><button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cerrar</button><button type="submit" class="btn btn-warning">Enviar enlace</button></div></form></div></div></div>
+      <div class="modal fade" id="modal-detalle" tabindex="-1" aria-labelledby="det-titulo" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title h5" id="det-titulo"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body" id="det-cuerpo"></div></div></div></div>
+    </main>
+    <footer class="site-footer pt-5 pb-3">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="logo-pie mb-3" href="index.html#inicio"><img src="imagenes/Header/logo.svg" alt="DataForge, ir al inicio" width="180" height="47"></a>
+            <p>Analítica de datos, Machine Learning y dashboards para empresas que quieren decidir con evidencia.</p>
+            <p class="redes d-flex gap-2 mb-0">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn de DataForge"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook de DataForge"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube de DataForge"><i class="bi bi-youtube"></i></a>
+            </p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2"><h2>Servicios</h2><ul class="list-unstyled d-grid gap-2"><li><a href="servicios/dashboards-bi.html">Dashboards &amp; BI</a></li><li><a href="servicios/analitica-descriptiva.html">Analítica descriptiva</a></li><li><a href="servicios/machine-learning.html">Machine Learning</a></li><li><a href="servicios/mlops.html">MLOps</a></li><li><a href="servicios/data-strategy.html">Data Strategy</a></li></ul></div>
+          <div class="col-6 col-md-4 col-lg-2"><h2>Empresa</h2><ul class="list-unstyled d-grid gap-2"><li><a href="casos_exito/casos_exito.html#casos-exito">Casos de éxito</a></li><li><a href="nosotros/nosotros.html#nosotros">Nosotros</a></li><li><a href="clientes/clientes.html#clientes">Clientes</a></li><li><a href="blog/blog.html#blog">Blog</a></li></ul></div>
+          <div class="col-12 col-md-4 col-lg-4"><h2>Contacto</h2><ul class="list-unstyled d-grid gap-2"><li><i class="bi bi-geo-alt me-2"></i>Av. Javier Prado Este 1234, San Isidro, Lima</li><li><i class="bi bi-envelope me-2"></i><a href="mailto:contacto@dataforge.pe">contacto@dataforge.pe</a></li><li><i class="bi bi-whatsapp me-2"></i><a href="https://wa.me/51987654321" target="_blank" rel="noopener">+51 987 654 321</a></li><li><a class="fw-bold" href="portal.html">Portal del cliente</a></li></ul></div>
+        </div>
+        <div class="pie-inferior mt-4 pt-3 border-top border-secondary">
+          <p class="mb-0">© <span data-anio>2026</span> DataForge Analytics. Todos los derechos reservados.</p>
+          <p class="mb-0">Términos · Privacidad · Seguridad de datos · <a href="mapa_sitio.html">Mapa del sitio</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

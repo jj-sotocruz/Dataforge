@@ -1,0 +1,5 @@
+/* Casos de éxito */
+.etiqueta{display:inline-block;margin-bottom:.75rem;font-size:.8rem;letter-spacing:.08em;color:var(--df-teal)}
+.metricas{display:flex;flex-wrap:wrap;gap:.75rem 2rem;margin:1rem 0 1.25rem;padding:0;list-style:none;color:#56657b;font-size:.9rem}
+.metricas strong{display:block;font:700 1.8rem/1.1 Georgia,serif;color:var(--df-teal)}
+.testimonio blockquote{margin:0 0 .75rem;padding-left:1rem;border-left:4px solid var(--df-orange);font-style:italic}
